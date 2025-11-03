@@ -1,0 +1,62 @@
+/* General Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #83ec9c;
+    color: #4a4949;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 5px;
+}
+
+/* Question List on Homepage */
+.question-list {
+    list-style: none;
+    padding-left: 0;
+}
+.question-list li a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #3498db;
+    transition: color 0.2s;
+}
+.question-list li a:hover {
+    color: #2980b9;
+}
+
+/* This is the rectangular code block you wanted */
+.code-block {
+    background-color: #2d2d2d; /* Dark background */
+    color: #f8f8f2;             /* Light text */
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    overflow-x: auto; /* Adds a scrollbar if code is too wide */
+    font-family: "Fira Code", "Courier New", monospace;
+    font-size: 0.95em;
+}
+
+/* Back link on question pages */
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #3498db;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
