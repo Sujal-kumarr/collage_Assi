@@ -21,10 +21,9 @@ h1, h2, h3 {
     padding-bottom: 5px;
 }
 
-/* NEW: Team Member Cards on Homepage */
+/* Team Member Cards (for index.html) */
 .team-grid {
     display: grid;
-    /* This makes the cards responsive */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin-top: 30px;
@@ -49,21 +48,19 @@ h1, h2, h3 {
     color: #3498db;
 }
 
-/* Question List (Used on member pages) */
-.question-list {
-    list-style: none;
-    padding-left: 0;
+/* NEW: Container for each problem on member pages */
+.problem-container {
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 8px;
 }
-.question-list li a {
-    text-decoration: none;
-    font-size: 1.1em;
-    color: #3498db;
-}
-.question-list li a:hover {
-    color: #2980b9;
+.problem-container h2 {
+    margin-top: 0;
 }
 
-/* Rectangular Code Block (Used on question pages) */
+/* Rectangular Code Block */
 .code-block {
     background-color: #2d2d2d;
     color: #f8f8f2;
@@ -74,13 +71,17 @@ h1, h2, h3 {
     font-family: "Fira Code", "Courier New", monospace;
     font-size: 0.95em;
 }
+.code-block code {
+    white-space: pre;
+}
 
-/* Back Link (Used on member/question pages) */
+/* Back Link */
 .back-link {
     display: inline-block;
     margin-bottom: 20px;
     text-decoration: none;
     color: #3498db;
+    font-weight: 500;
 }
 .back-link:hover {
     text-decoration: underline;
