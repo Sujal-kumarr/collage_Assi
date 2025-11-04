@@ -1,13 +1,12 @@
 /* General Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #83ec9c;
-    color: #4a4949;
+    background-color: #f4f7f6;
+    color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
 }
-
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -16,14 +15,41 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-
 h1, h2, h3 {
     color: #2c3e50;
     border-bottom: 2px solid #ecf0f1;
     padding-bottom: 5px;
 }
 
-/* Question List on Homepage */
+/* NEW: Team Member Cards on Homepage */
+.team-grid {
+    display: grid;
+    /* This makes the cards responsive */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.team-member-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s ease;
+}
+.team-member-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+.team-member-card h3 {
+    margin-top: 0;
+    border-bottom: none;
+    color: #3498db;
+}
+
+/* Question List (Used on member pages) */
 .question-list {
     list-style: none;
     padding-left: 0;
@@ -32,25 +58,24 @@ h1, h2, h3 {
     text-decoration: none;
     font-size: 1.1em;
     color: #3498db;
-    transition: color 0.2s;
 }
 .question-list li a:hover {
     color: #2980b9;
 }
 
-/* This is the rectangular code block you wanted */
+/* Rectangular Code Block (Used on question pages) */
 .code-block {
-    background-color: #2d2d2d; /* Dark background */
-    color: #f8f8f2;             /* Light text */
+    background-color: #2d2d2d;
+    color: #f8f8f2;
     padding: 15px;
     margin: 20px 0;
     border-radius: 5px;
-    overflow-x: auto; /* Adds a scrollbar if code is too wide */
+    overflow-x: auto;
     font-family: "Fira Code", "Courier New", monospace;
     font-size: 0.95em;
 }
 
-/* Back link on question pages */
+/* Back Link (Used on member/question pages) */
 .back-link {
     display: inline-block;
     margin-bottom: 20px;
