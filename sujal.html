@@ -130,8 +130,48 @@ public class Solution extends VersionControl {
     }
 }
 </code></pre>
-        </div> <!-- End Problem 3 -->
+        </div>  <!-- End Problem 3 -->
+        
+        <!-- --- Problem 4 --- -->
+        <div class="problem-container">
+            <h2>Problem 4: First Bad Version</h2>
+            
+            <h3>Problem Statement</h3>
+            <p>You have `n` versions `[1, ..., n]` and an API `bool isBadVersion(version)`. Find the first bad version, which causes all following ones to be bad. Minimize API calls.</p>
+            
+            <h3>Approach</h3>
+            <p>This is a Binary Search problem on the "answer space" from 1 to `n`. We search for the *smallest* index that is `true`. If `isBadVersion(mid)` is `true`, we know the first bad version is at `mid` or to its left, so we set `high = mid`. If it's `false`, the first bad version must be to its right, so we set `low = mid + 1`.</p>
+            
+            <h3>Example</h3>
+            <pre class="code-block">Input: n = 5, bad = 4
+Output: 4</pre>
+            
+            <h3>Solution (Java)</h3>
+            <pre class="code-block"><code>
+/* The isBadVersion API is defined for you.
+      boolean isBadVersion(int version); */
+
+public class Solution extends VersionControl {
+    public int firstBadVersion(int n) {
+        int low = 1;
+        int high = n;
+        
+        while (low < high) {
+            int mid = low + (high - low) / 2;
+            if (isBadVersion(mid)) {
+                high = mid; // This could be the first, so check left
+            } else {
+                low = mid + 1; // It must be after this one
+            }
+        }
+        
+        return low; // 'low' and 'high' meet at the first bad version
+    }
+}
+</code></pre>
+        </div> <!-- End Problem 4 -->
         
     </div>
 </body>
+
 </html>
